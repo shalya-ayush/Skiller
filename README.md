@@ -1,5 +1,5 @@
 # Skiller
-Cloud Projxt Repo
+Cloud Project Repo
 Fork this project .
 clone the repo .
 Paste the Repo link in import from version control.

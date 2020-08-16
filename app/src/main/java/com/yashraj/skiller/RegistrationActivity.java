@@ -2,6 +2,7 @@ package com.yashraj.skiller;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -69,7 +70,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 if (mUser != null) {
                     Log.d("User loggin in status..............", "User logged in!!");
                     Toast.makeText(RegistrationActivity.this, "Verified User", Toast.LENGTH_SHORT).show();
-//                    sendUserToMainActivity();
+                    sendUserToMainActivity();
                     finish();
                 }
             }
@@ -162,15 +163,15 @@ public class RegistrationActivity extends AppCompatActivity {
         };
     }
 
-//    private void sendUserToMainActivity() {
-//
-//        Intent intent=new Intent(RegistrationActivity.this,DetailsActivity.class);
-//        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//        startActivity(intent);
-//        finish();
-//
-//    }
+    private void sendUserToMainActivity() {
+
+        Intent intent=new Intent(RegistrationActivity.this,DashboardActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        finish();
+
+    }
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         mAuth.signInWithCredential(credential)
@@ -181,7 +182,7 @@ public class RegistrationActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             loadingbar.dismiss();
-//                            sendUserToMainActivity();
+                            sendUserToMainActivity();
                             Toast.makeText(RegistrationActivity.this, "Verified User ", Toast.LENGTH_SHORT).show();
                             FirebaseUser user = task.getResult().getUser();
                             // ...

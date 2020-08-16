@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/dash_app_home"
+        android:title="Home"
+        android:icon="@drawable/jam_home_f"
+        />
+    <item android:id="@+id/dash_app_category"
+        android:title="Category"
+        android:icon="@drawable/bi_card_list"
+        />
+    <item android:id="@+id/dash_app_notification"
+        android:title="Notifications"
+        android:icon="@drawable/vector"
+        />
+    <item android:id="@+id/dash_app_profile"
+        android:title="Profile"
+        android:icon="@drawable/bi_person_circle"
+        />
+</menu>
